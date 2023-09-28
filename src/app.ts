@@ -5,7 +5,6 @@ import httpStatus from 'http-status';
 import globalExceptionHandler from './app/middlewares/globalExceptionHandler';
 import routes from './app/routes';
 
-
 const app: Application = express();
 
 
@@ -16,9 +15,6 @@ app.use(cookieParser());
 
 app.use('/api/v1', routes);
 
-// app.get('/', (req, res) => {
-//   res.send("Server started Successfully")
-// })
 
 app.use(globalExceptionHandler);
 
